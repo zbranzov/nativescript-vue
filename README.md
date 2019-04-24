@@ -45,6 +45,11 @@ NativeScript-Vue is an MIT-licensed open source project made possible by our spo
           <img height="50px" src="https://art.nativescript-vue.org/sponsors/progress.png">
         </a>
       </td>
+      <td align="center" valign="middle">
+        <a href="https://saucelabs.com" target="_blank">
+          <img height="50px" src="https://saucelabs.com/content/images/logo.png">
+        </a>
+      </td>
     </tr><tr></tr>
   </tbody>
 </table>
