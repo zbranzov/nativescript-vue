@@ -58,7 +58,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd samples && npm i
+        - cd samples && npm install -D wd@latest && npm i
         - travis_wait travis_retry npm run e2e -- --runType sim12iPhoneX --sauceLab --appPath $IOS_PACKAGE_VUE
     - os: linux
       env:
@@ -69,7 +69,7 @@ matrix:
       node_js: "8"
       script:
         - npm i -g appium
-        - cd samples && npm i
+        - cd samples && npm install -D wd@latest && npm i
         - travis_wait travis_retry npm run e2e -- --runType android24.sauce --sauceLab --appPath $ANDROID_PACKAGE_VUE
 
 android:
@@ -95,11 +95,9 @@ before_install:
     - sudo pip install six
         
 install:
-    - echo no | npm install -g nativescript
+    - echo no | npm install -g nativescript@next
     - tns usage-reporting disable
     - tns error-reporting disable
     - cd samples
     - npm install tns-core-modules@next -P
-    - npm install nativescript-dev-webpack@next -D
-    - ./node_modules/.bin/update-ns-webpack --deps --configs
     - cd ..
